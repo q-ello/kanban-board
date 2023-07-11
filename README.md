@@ -1,4 +1,4 @@
-#Канбан доска, реализованная на React Typescript
+Канбан доска, реализованная на React Typescript
 
 ![image](https://github.com/q-ello/kanban-board/assets/116018445/a1e31f56-0fbe-4227-9021-d1ed51aefd26)
 
