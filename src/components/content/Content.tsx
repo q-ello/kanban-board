@@ -10,7 +10,7 @@ const Content = () => {
 
     useEffect(() => {
         getFormsData()
-    }, [getFormsData])
+    }, [])
 
     return (
         <Routes>
