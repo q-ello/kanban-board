@@ -1,0 +1,71 @@
+@import '../../variables.scss';
+
+.nav {
+    position: relative;
+
+    &_menu {
+        position: absolute;
+        display: none;
+        z-index: 1;
+
+        &__open {
+            top: 55px;
+            right: 0;
+            width: 134px;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+
+            &::after {
+                content: url('../../icons/navmenu-rect.svg');
+                position: absolute;
+                top: -8px;
+                right: 37px;
+            }
+        }
+    }
+
+    &_button {
+        position: relative;
+        right: 24px;
+        display: flex;
+        align-items: center;
+
+        &__open::after {
+            top: 8px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.avatar {
+    background-color: $white;
+    border-radius: 50%;
+}
+
+.arrow {
+    position: relative;
+    top: 2px;
+    transition: 0.3s;
+}
+
+.arrow_down {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.li {
+    line-height: 22px;
+    font-size: 14px;
+    display: block;
+    :hover {
+        color: $blue-primary;
+        text-decoration: underline;
+    }
+}
+
+.link {
+    color: $black;
+}

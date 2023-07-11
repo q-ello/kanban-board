@@ -1,0 +1,66 @@
+@import '../../../variables.scss';
+
+.placeholder {
+    width: 100%;
+    min-height: 35px;
+    background-color: $white;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.arrow {
+    transition: 0.3s;
+
+    &_reverse {
+        transform: rotate(180deg);
+    }
+}
+
+.select {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+
+    &_wrapper {
+        position: relative;
+        margin-bottom: 15px;
+    }
+}
+
+.option {
+    background-color: $white;
+    padding: 8px;
+    overflow-wrap: break-word;
+
+    &:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    &:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    &:hover {
+        background-color: $select-task;
+        cursor: pointer;
+    }
+}
+
+.span {
+    max-width: $select-span-width-desktop;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @media screen and (max-width: 800px) {
+        max-width: $select-span-width-mobile;
+    }
+}

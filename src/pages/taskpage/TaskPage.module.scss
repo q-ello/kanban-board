@@ -1,0 +1,42 @@
+@import '../../variables.scss';
+
+.task_page {
+    background-color: $white;
+    position: absolute;
+    top: 77px;
+    right: 28px;
+    bottom: 75px;
+    left: 26px;
+    padding: 22px 28px;
+}
+
+.h1 {
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+
+.textarea {
+    font-size: 18px;
+    line-height: 21px;
+    width: 621px;
+    height: 85%;
+    color: $black;
+    border: none;
+    resize: none;
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+    }
+}
+
+.x {
+    position: absolute;
+    top: 17px;
+    right: 23px;
+    width: 32px;
+    height: 32px;
+}

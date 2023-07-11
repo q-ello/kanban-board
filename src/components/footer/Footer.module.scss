@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    background-color: $blue-secondary;
+    width: 100%;
+    padding: 17px 20px;
+
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
+}
+
+.span {
+    font-size: 18px;
+    color: $white;
+    margin-right: 36px;
+}
+
+.credits {
+    position: absolute;
+    right: 20px;
+    margin-right: 0;
+}

@@ -1,0 +1,110 @@
+@import '../../variables.scss';
+
+.tasklist {
+    background-color: $list-bg;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 18px;
+    height: fit-content;
+    color: $black;
+    width: $tasklist-width;
+    max-height: calc(100vh - 170px);
+    overflow-y: auto;
+
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $white;
+        margin-top: 30px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #CBCBCB;
+        border-radius: 5px;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    &_name {
+        text-transform: capitalize;
+    }
+
+    &_ul {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    &_button {
+        font-size: 18px;
+        color: $add-card-text;
+        border-radius: 5px;
+        padding: 5px;
+        width: 102px;
+
+        &:disabled,
+        &:disabled:hover {
+            opacity: 0.7;
+            cursor: auto;
+            background: none;
+        }
+
+        &_svg {
+            margin-right: 3px;
+        }
+
+        &:hover {
+            background-color: $white;
+        }
+
+        &_submit {
+            background-color: $blue-primary;
+            color: $white;
+
+            &:hover {
+                background-color: $blue-secondary;
+                color: $white;
+            }
+
+            &:disabled,
+            &:disabled:hover {
+                background-color: $blue-primary;
+            }
+        }
+    }
+}
+
+.task {
+    background-color: $white;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    position: relative;
+    overflow-wrap: break-word;
+    cursor: pointer;
+
+    &_select {
+        margin-bottom: 15px;
+        position: relative;
+    }
+}
+
+.input {
+    color: $black;
+    background: none;
+    border: none;
+    font-size: 18px;
+    border-bottom: 1px solid $black;
+    width: 100%;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
