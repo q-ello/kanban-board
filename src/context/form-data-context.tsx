@@ -39,7 +39,7 @@ export const FormDataContextWrapper = ({ children }: PropsWithChildren) => {
   }
 
   const getOptions = (to: FormName) => {
-    if (to === 'backlog') {
+    if (to === FormName.Backlog) {
       return []
     }
 

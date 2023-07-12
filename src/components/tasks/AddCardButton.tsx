@@ -22,7 +22,7 @@ const AddCardButton = ({ name }: AddCardButtonProps) => {
     const isBacklog: boolean = name === 'backlog'
 
     const hasNoOptions: boolean = !(isBacklog || !!options.length)
-    const hasNoValue: boolean = !(!!value || !!selectedOption)
+    const hasNoValue: boolean = !(!!value.trim() || !!selectedOption)
 
     const addCard = () => {
         setActiveBtn(prev => !prev)
@@ -59,7 +59,7 @@ const AddCardButton = ({ name }: AddCardButtonProps) => {
         <>
             {activeBtn 
                 ? isBacklog
-                    ? <div className={st.task}><input data-testid='input' autoFocus={true} ref={inputRef} onChange={handleInputChange} onBlur={handleBlur} className={st.input} value={value} /></div>
+                    ? <div className={st.task}><input data-testid='input' autoFocus={true} ref={inputRef} onChange={handleInputChange} onBlur={handleBlur} className={st.input} value={value} maxLength={50}/></div>
                     : <Select testid='select-comp' selected={selectedOption} onChange={handleSelectChange} options={options} />
                 : null
             }
